@@ -1,6 +1,8 @@
 <?php
     require 'header.php';
-    require 'oeuvres.php';
+    require 'bdd.php';
+    $db = connexion();
+    $oeuvres = $db->query('SELECT * FROM oeuvres ORDER BY id ASC');
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
