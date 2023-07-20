@@ -17,7 +17,9 @@
         <label for="description">Description</label>
         <textarea name="description" id="description"></textarea>
     </div>
-
+    <?php if(isset($_GET['erreur'])): ?>
+        <p>Veuillez remplir tous les champs correctement.</p>
+    <?php endif; ?>
     <input type="submit" value="Valider" name="submit">
 </form>
 
